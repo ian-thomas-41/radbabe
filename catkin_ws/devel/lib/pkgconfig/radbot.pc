@@ -1,0 +1,8 @@
+prefix=/home/user1/catkin_ws/devel
+
+Name: radbot
+Description: Description of radbot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

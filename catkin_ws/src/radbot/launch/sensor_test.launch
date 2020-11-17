@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+
+
+    <!-- TRANSFORMS  -->
+    <node pkg="tf" type="static_transform_publisher" name="base_link_to_imu" args="0 0 0 0 0 0 1 base_link gx5_link 100" /> 
+    <node pkg="tf" type="static_transform_publisher" name="base_link_to_velodyne" args="0 0 0 0 0 0 1 base_link velodyne 100" /> 
+
+
+    <include file="$(find radbot)/launch/VLP16_points.launch"/>
+    
+    <include file="$(find microstrain_mips)/launch/microstrain.launch"/>
+    <include file="$(find radbot)/launch/cartographer_demo.launch"/>
+    
+
+
+    <!-- Start RVIZ -->
+    <node pkg="rviz" type="rviz" output="screen" name="rviz" args="-d $(find radbot)/launch/config/sensor_test.rviz"/>
+</launch>

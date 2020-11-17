@@ -1,0 +1,8 @@
+prefix=/home/user1/catkin_ws/devel
+
+Name: nu_jackal_autonav
+Description: Description of nu_jackal_autonav
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
